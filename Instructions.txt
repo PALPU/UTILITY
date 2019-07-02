@@ -1,0 +1,25 @@
+		Read the Whole Instructions before Execution.
+1. Open the Command Prompt
+2. Go to the path to the desired folder (e.g. c:\>  cd c:\Utility_program),  here Utility_program is the folder name where the Utility.jar is kept.
+3. write the command (java -jar Utility.jar) in the commandLine  and press Enter to execute the program.
+4. write the path of the Automation folder where testscirpts are checked in. 
+	e.g. D:\DMS\Automation	 		The Path must be written till Automation
+	     D:\RSK\Automation		The Path must be written till Automation
+5. Wait till the program Runs.....
+6. After the Successful Execution of the Program a message : "Program Executed Successfully" will come written on the screen.
+
+
+
+7. Four log files will be created in the folder in which Utility.jar is kept.
+
+8. Four Files will be 
+	LinksModified.txt :	It will contain the details of links modified. i.e. Tool has identified case insensitivity between actual file and path mentioned in the excel file. It will have the Excel file name which is read, the older links which are modified and new Link Updated.
+		Action item: Verify the changes. Run Sanity/testcases for modified files. Check-in to Repo.
+	CorrectPaths.txt :	It will contain Links of all the Excel Files which are found Correct and from which Excel file those links are read. 
+		Action item: No user action required.
+	Exceptions_file.txt :	It will contain Links of all the Excel Files in which we found Exceptions. This are invalid files. 
+		Action item: User can remove from repository.
+	FilesNotFound.txt :	It will contain Links of all the Excel Files which are not found and from which excel file those are read. 
+		Action item: Validate the testcase and do the changes in excel file.
+
+Note: Take backup of the log files. It will be overwritten  during each execution of the programe. 
